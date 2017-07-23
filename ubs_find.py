@@ -20,7 +20,8 @@ def show_devices(devices, nameTag=True):
         vidpid = (device["id"]).split(':')
         if(nameTag):
             name = device["tag"]
-        print "|No.%s |Vid:%s |Pid:%s |Name:%s" % (index, vidpid[0], vidpid[1], name)
+        print("|No.%s |Vid:%s |Pid:%s |Name:%s" % (index, vidpid[0], vidpid[1], name))
+        # print "|No.%s |Vid:%s |Pid:%s |Name:%s" % (index, vidpid[0], vidpid[1], name)
 		
 show_devices(devices)
 

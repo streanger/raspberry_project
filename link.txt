@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/12542799/communication-with-the-usb-device-in-python/12543149#12543149][1]
