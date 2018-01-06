@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#by streanger
 from fpdf import FPDF
 from PIL import Image
 import os
@@ -36,6 +37,6 @@ def make_pdf(fileName, listPages):
 if __name__=="__main__":
     imageList = get_files(True, ".png")
     imageList.sort()
-    print(imageList)
-    make_pdf("2-6.01.18_temp.pdf", imageList)
+    #print(imageList)
+    make_pdf("somePDF.pdf", imageList)
 
