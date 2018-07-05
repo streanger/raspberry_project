@@ -3,13 +3,18 @@
 #than run arp_scanning
 #and finally write it to file
 import subprocess
+import os
+import sys
 
 def script_path():
-    print(42)
-    return True
+    path = os.path.realpath(os.path.dirname(sys.argv[0]))
+    os.chdir(path)
+    return path
 
 def simple_write(file, strContent):
-    print(42)
+    with open(file, "w") as f:
+        f.write(strContent + "\n")
+        f.close()
     return True
 
 def arp_scan():
@@ -17,11 +22,19 @@ def arp_scan():
     return hosts
 
 def check_lan_connection():
+    #t_end = time.time() + 30    #number of seconds
+    #while time.time() < t_end:
+    #    #check if your in lan
+    #    pass
+    hostname = "localhost"
+    response = subprocess.getoutput(["ping -c 1 " + hostname])
     return True
 
 def main():
+    path = script_path()
     hosts = arp_scan()
-    print(hosts)
+    simple_write("hosts.txt", hosts)
 
 if __name__ == "__main__":
+    #check_lan_connection()
     main()
