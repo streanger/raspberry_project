@@ -14,3 +14,5 @@ i2c_write(int file, int address, int subaddress, int size, char *data) {
 
 -------------------------------------
 https://github.com/Mani-Sadhasivam/mraa/commit/24f910fe2b4439fc3674c3bd2bd512485bf7fc03
+
+https://github.com/intel-iot-devkit/mraa/issues/805
