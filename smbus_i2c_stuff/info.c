@@ -11,3 +11,6 @@ i2c_write(int file, int address, int subaddress, int size, char *data) {
     memcpy(buf + 1, data, size);      // so copy subaddress and data to a buffer 
     write(file, buf, size + 1); 
 }
+
+-------------------------------------
+https://github.com/Mani-Sadhasivam/mraa/commit/24f910fe2b4439fc3674c3bd2bd512485bf7fc03
